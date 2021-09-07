@@ -4,7 +4,10 @@
   "description": "The Hat Project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify src/js/app.js -o bundle.js && copy bundle.js /y \"electron/assets/js/bundle.js\"",
+    "full-build": "npm i && cd electron && npm i && npm run build",
+    "e-serve": "cd electron && npm run serve"
   },
   "author": "sh-dv",
   "license": "ISC",
