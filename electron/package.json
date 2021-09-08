@@ -15,7 +15,7 @@
   "author": "shdv",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^9.1.0"
+    "electron": "^9.4.4"
   },
   "dependencies": {
     "electron-context-menu": "^0.13.0",
