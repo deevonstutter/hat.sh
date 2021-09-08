@@ -3,6 +3,7 @@ const bootstrap = require('bootstrap');
 var $ = require("jquery");
 const popperjs = require('popper.js');
 const zxcvbn = require('zxcvbn');
+const fs = window.require('fs');
 
 //file input events
 const inputFile = document.getElementById("customFile"); //file input
@@ -25,6 +26,10 @@ decryptBtn.addEventListener("click", decryptFile); //from the generateKey functi
 
 const resetBtn = document.getElementById("resetBtn");
 resetBtn.addEventListener("click", resetInputs); //reset inputs on click
+
+// For the command-line/context menu launch stuff
+var propUsed = true;
+const propFilepath = "C:\\tmep\\test.txt";
 
 //declarations
 const DEC = {
@@ -73,6 +78,10 @@ function escapeHTML(unsafe) {
 
 //determination of file name and size 
 function updateNameAndSize() {
+
+  if (propUsed)
+   propUsed = false;
+
   showResetBtn();
   let nBytes = 0,
     oFiles = inputFile.files,
@@ -88,15 +97,13 @@ function updateNameAndSize() {
   for (let aMultiples = ["KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
     sOutput = nApprox.toFixed(2) + " " + aMultiples[nMultiple];
   }
-  // console.log(fileName);
+  
   //change placeholder text
   if (!inputFile.value) {
     placeHolder.innerHTML = "Choose a file to encrypt/decrypt";
   } else {
     placeHolder.innerHTML = escapeHTML(fileName) + '  <span class="text-success">' + sOutput + '</span>';
   }
-
-
 }
 
 //show and hide reset btn from html
@@ -268,7 +275,9 @@ async function deriveEncryptionSecretKey() { //derive the secret key from a mast
 //file encryption function
 async function encryptFile() {
   //check if file and password inputs are entered
-  if (!inputFile.value || !password.value) {
+  if (propUsed) {
+    encryptFileFromPath(propFilepath);
+  } else if (!inputFile.value || !password.value) {
     errorMsg("Please browse a file and enter a Key")
   } else {
     
@@ -293,7 +302,7 @@ async function encryptFile() {
           }, derivedKey, content) 
           .then(function (encrypted) {
             //returns an ArrayBuffer containing the encrypted data
-            resolve(processFinished('Encrypted-' + file.name, [window.atob(DEC.signature), iv, DEC.salt, new Uint8Array(encrypted)], 1, password.value)); //create the new file buy adding signature and iv and content
+            resolve(processFinished(file.name + '.heb', [window.atob(DEC.signature), iv, DEC.salt, new Uint8Array(encrypted)], 1, password.value)); //create the new file buy adding signature and iv and content
             //console.log("file has been successuflly encrypted");
             resetInputs(); // reset file and key inputs when done
           })
@@ -310,6 +319,37 @@ async function encryptFile() {
 }
 
 
+async function encryptFileFromPath(filepath) {
+  const derivedKey = await deriveEncryptionSecretKey(); //requiring the key
+
+  const filepaths = filepath.split('\\');
+  const filename = filepaths[filepaths.length - 1];
+
+  $(".loader").css("display", "block"); //show spinner while loading a file
+
+  const fb = fs.readFileSync(filepath)
+
+  var arraybuffer = Uint8Array.from(fb).buffer;
+
+  const iv = window.crypto.getRandomValues(new Uint8Array(16)); //generate a random iv
+  const content = new Uint8Array(arraybuffer); //encoded file content
+  // encrypt the file
+  await window.crypto.subtle.encrypt({
+      iv,
+      name: DEC.algoName2
+    }, derivedKey, content) 
+    .then(function (encrypted) {
+      //returns an ArrayBuffer containing the encrypted data
+      processFinished(filename + '.heb', [window.atob(DEC.signature), iv, DEC.salt, new Uint8Array(encrypted)], 1, password.value); //create the new file buy adding signature and iv and content
+      //console.log("file has been successuflly encrypted");
+      resetInputs(); // reset file and key inputs when done
+    })
+    .catch(function (err) {
+      alert(err);
+      errorMsg("An error occured while Encrypting the file, try again!"); //reject
+    });
+  $(".loader").css("display", "none"); //hide spinner
+}
 
 
 //file decryption function
@@ -376,7 +416,7 @@ async function decryptFile() {
           .then(function (decrypted) {
             //returns an ArrayBuffer containing the decrypted data
 
-            resolve(processFinished(file.name.replace('Encrypted-', ''), [new Uint8Array(decrypted)], 2, password.value)); //create new file from the decrypted content
+            resolve(processFinished(file.name.replace('.heb', ''), [new Uint8Array(decrypted)], 2, password.value)); //create new file from the decrypted content
             //console.log("file has been successuflly decrypted");
             resetInputs(); // reset file and key inputs when done
           })
