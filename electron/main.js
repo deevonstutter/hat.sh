@@ -1,7 +1,8 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, Menu} = require('electron')
+const {app, BrowserWindow, Menu, CommandLine} = require('electron')
 const path = require('path')
 const contextMenu = require('electron-context-menu');
+const process = require('process');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -19,13 +20,24 @@ let mainWindow;
 
 
 function createWindow () {
+  var arg1 = 'N';
+  var ed = 'N';
+  if (app.commandLine.hasSwitch('e')) {
+    arg1 = app.commandLine.getSwitchValue('e');
+    ed = 'e';
+  } else if (app.commandLine.hasSwitch('d')) {
+    arg1 = app.commandLine.getSwitchValue('d');
+    ed = 'd';
+  }
+
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 800,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true
+      nodeIntegration: true,
+      additionalArguments: [ed,arg1]
     }
   })
 

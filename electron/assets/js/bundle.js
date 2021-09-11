@@ -19631,8 +19631,32 @@ const resetBtn = document.getElementById("resetBtn");
 resetBtn.addEventListener("click", resetInputs); //reset inputs on click
 
 // For the command-line/context menu launch stuff
-var propUsed = true;
-const propFilepath = "C:\\tmep\\test.txt";
+
+const argv = window.process.argv;
+var propFilepath = argv[argv.length - 1];
+while (propFilepath.includes('/'))
+  propFilepath = propFilepath.replace('/', '\\');
+const propFunction = argv[argv.length - 2];
+var propUsed = propFilepath != 'N';
+
+if (propUsed) {
+  const filepaths = propFilepath.split('\\');
+  placeHolder = document.getElementById("file-placeholder");
+  var fstat;
+  try 
+  {
+    fstat = fs.lstatSync(propFilepath);
+  } catch
+  {
+    alert('INCORRECT PATH');
+  }
+  let sOutput = fstat.size + " bytes";
+  for (let aMultiples = ["KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"], nMultiple = 0, nApprox = fstat.size / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
+    sOutput = nApprox.toFixed(2) + " " + aMultiples[nMultiple];
+  }
+
+  placeHolder.innerHTML = escapeHTML(filepaths[filepaths.length - 1]) + '  <span class="text-success">' + sOutput + '</span>';
+}
 
 //declarations
 const DEC = {
@@ -19683,7 +19707,10 @@ function escapeHTML(unsafe) {
 function updateNameAndSize() {
 
   if (propUsed)
-   propUsed = false;
+  {
+    propUsed = false;
+  }
+
 
   showResetBtn();
   let nBytes = 0,
@@ -19716,7 +19743,8 @@ function hideResetBtn(){$("#resetBtn").css("display", "none");}
 //reset inputs
 //if inputs are set reset them on click
 function resetInputs(){
-  if (inputFile.value != 0 || password.value != 0) {
+  if (inputFile.value != 0 || password.value != 0 || propUsed) {
+    propUsed = false;
     inputFile.value = "";
     password.value = "";
     updateNameAndSize();
@@ -19878,7 +19906,7 @@ async function deriveEncryptionSecretKey() { //derive the secret key from a mast
 //file encryption function
 async function encryptFile() {
   //check if file and password inputs are entered
-  if (propUsed) {
+  if (propUsed && password.value) {
     encryptFileFromPath(propFilepath);
   } else if (!inputFile.value || !password.value) {
     errorMsg("Please browse a file and enter a Key")
@@ -19927,18 +19955,12 @@ async function encryptFileFromPath(filepath) {
 
   const filepaths = filepath.split('\\');
   const filename = filepaths[filepaths.length - 1];
-  alert(filename);
-  alert(filepath);
 
   $(".loader").css("display", "block"); //show spinner while loading a file
 
   const fb = fs.readFileSync(filepath)
 
-  alert(fb.byteLength);
-
   var arraybuffer = Uint8Array.from(fb).buffer;
-
-  alert(arraybuffer.byteLength);
 
   const iv = window.crypto.getRandomValues(new Uint8Array(16)); //generate a random iv
   const content = new Uint8Array(arraybuffer); //encoded file content
@@ -19954,7 +19976,7 @@ async function encryptFileFromPath(filepath) {
       resetInputs(); // reset file and key inputs when done
     })
     .catch(function (err) {
-      alert(err);
+      //alert(err);
       errorMsg("An error occured while Encrypting the file, try again!"); //reject
     });
   $(".loader").css("display", "none"); //hide spinner
@@ -19965,7 +19987,9 @@ async function encryptFileFromPath(filepath) {
 
 async function decryptFile() {
 
-  if (!inputFile.value || !password.value) {
+  if (propUsed && password.value) {
+    decryptFileFromPath(propFilepath);
+  } else if (!inputFile.value || !password.value) {
     errorMsg("Please browse a file and enter a Key")
   } else {
 
@@ -20041,6 +20065,79 @@ async function decryptFile() {
     });
   }
 
+}
+
+async function decryptFileFromPath(filepath)
+{
+  const filepaths = filepath.split('\\');
+  var filename = filepaths[filepaths.length - 1];
+
+  $(".loader").css("display", "block"); //show spinner while loading a file
+
+  const fb = fs.readFileSync(filepath);
+
+  var arraybuffer = Uint8Array.from(fb).buffer;
+
+  async function deriveDecryptionSecretKey() { //derive the secret key from a master key.
+
+    let getSecretKey = await importSecretKey();
+
+    return window.crypto.subtle.deriveKey({
+        name: DEC.algoName1,
+        salt: new Uint8Array(arraybuffer.slice(38, 54)), //get salt from encrypted file.
+        iterations: DEC.itr,
+        hash: {
+          name: DEC.hash
+        },
+      },
+      getSecretKey, //your key from importKey
+      { //the key type you want to create based on the derived bits
+        name: DEC.algoName2,
+        length: DEC.algoLength,
+      },
+      false, //whether the derived key is extractable 
+      DEC.perms2 //limited to the options encrypt and decrypt
+    )
+    // Just a note from the person who made this edit, I don't know why this
+    // stuff was in the original code, but I'm leaving it here in case it
+    // becomes useful at some point :^)
+    //
+    //console.log the key
+    // .then(function(key){
+    //     //returns the derived key
+    //     console.log(key);
+    // })
+    // .catch(function(err){
+    //     console.error(err);
+    // });
+  
+  }
+
+  //console.log(fr.result);
+  const derivedKey = await deriveDecryptionSecretKey(); //requiring the key
+
+  const iv = new Uint8Array(arraybuffer.slice(22, 38)); //take out encryption iv
+
+  const content = new Uint8Array(arraybuffer.slice(54)); //take out encrypted content
+
+  await window.crypto.subtle.decrypt({
+      iv,
+      name: DEC.algoName2
+    }, derivedKey, content)
+    .then(function (decrypted) {
+      //returns an ArrayBuffer containing the decrypted data
+
+      processFinished(filename.replace('.heb', ''), [new Uint8Array(decrypted)], 2, password.value); //create new file from the decrypted content
+      //console.log("file has been successuflly decrypted");
+      resetInputs(); // reset file and key inputs when done
+    })
+    .catch(function (err) {
+      //alert(err);
+      errorMsg(err);
+      errorMsg("You have entered a wrong Decryption Key!");
+    });
+
+      $(".loader").css("display", "none"); //hide spinner
 }
 
 },{"bootstrap":1,"jquery":2,"popper.js":3,"zxcvbn":7}]},{},[11]);
