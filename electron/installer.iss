@@ -82,72 +82,73 @@ Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\ve
 Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\vk_swiftshader.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\vk_swiftshader_icd.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\vulkan-1.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\am.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ar.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\bg.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\bn.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ca.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\cs.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\da.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\de.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\el.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\en-GB.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\en-US.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\es.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\es-419.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\et.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\fa.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\fi.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\fil.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\fr.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\gu.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\he.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\hi.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\hr.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\hu.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\id.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\it.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ja.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\kn.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ko.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\lt.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\lv.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ml.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\mr.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ms.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\nb.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\nl.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\pl.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\pt-BR.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\pt-PT.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ro.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ru.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\sk.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\sl.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\sr.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\sv.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\sw.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ta.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\te.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\th.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\tr.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\uk.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\vi.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\zh-CN.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\zh-TW.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\resources\app.asar"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\swiftshader\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\swiftshader\libGLESv2.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\am.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ar.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\bg.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\bn.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ca.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\cs.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\da.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\de.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\el.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\en-GB.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\en-US.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\es.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\es-419.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\et.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\fa.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\fi.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\fil.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\fr.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\gu.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\he.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\hi.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\hr.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\hu.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\id.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\it.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ja.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\kn.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ko.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\lt.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\lv.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ml.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\mr.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ms.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\nb.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\nl.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\pl.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\pt-BR.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\pt-PT.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ro.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ru.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\sk.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\sl.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\sr.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\sv.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\sw.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\ta.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\te.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\th.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\tr.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\uk.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\vi.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\zh-CN.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\locales\zh-TW.pak"; DestDir: "{app}\locales"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\resources\app.asar"; DestDir: "{app}\resources"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\swiftshader\libEGL.dll"; DestDir: "{app}\swiftshader"; Flags: ignoreversion
+Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\swiftshader\libGLESv2.dll"; DestDir: "{app}\swiftshader"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#MyAppAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}"; ValueType: string; ValueName: ""; ValueData: "{#MyAppAssocName}"; Flags: uninsdeletekey
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"
-Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
+Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""--e=%1"""
 Root: HKA; Subkey: "Software\Classes\Applications\{#MyAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".myp"; ValueData: ""
-Root: HKCR; Subkey: "*\shell\Hatsh\command"; ValueType: string; ValueName: ""; ValueData: "{app}\hat.sh.exe ""--e=%1"""
-Root: HKCR; Subkey: "*\shell\Hatsh"; ValueType: string; ValueName: ""; ValueData: "En/decrypt with hat.sh"
+Root: HKCR; Subkey: "*\shell\Hatsh\command"; ValueType: string; ValueName: ""; ValueData: "{app}\hat.sh.exe ""--e=%1"""; Flags: uninsdeletekey
+Root: HKCR; Subkey: "*\shell\Hatsh"; ValueType: string; ValueName: ""; ValueData: "En/decrypt with hat.sh"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "*\shell\Hatsh"; ValueType: string; ValueName: "Icon"; ValueData: "{app}\hat.sh.exe"; Flags: uninsdeletekey
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
