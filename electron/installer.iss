@@ -150,7 +150,8 @@ Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}"; ValueType: string; Value
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 Root: HKA; Subkey: "Software\Classes\Applications\{#MyAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".myp"; ValueData: ""
-Root: HKCR; Subkey: "*\shell\Hatsh\command"; ValueType: string; ValueName: ""; ValueData: ""{app}\hat.sh.exe" "%1""
+Root: HKCR; Subkey: "*\shell\Hatsh\command"; ValueType: string; ValueName: ""; ValueData: ""{app}\hat.sh.exe" "--e=%1""
+Root: HKCR; Subkey: "*\shell\Hatsh"; ValueType: string; ValueName: ""; ValueData: "En/decrypt with hat.sh"
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
