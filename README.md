@@ -1,3 +1,7 @@
+# PLEASE READ THIS SECTION
+## This is a heavily modified version of hat.sh designed to make it integrate better with desktop environments. If you want to just use the webapp, please use the regular repository, because this will likely not run the way you would like it to on your web browser.
+
+<br>
 
 <p align="center">
   <a href="#" rel="noopener">
@@ -34,19 +38,13 @@ in a small amount of code the app can encrypt any **type** of files at any **siz
 To use the app all you have to do is **Browse** a file,  **Type** a Decryption Key or **Generate** one through our secure key generator. and your encrypted file is ready to download.
 
 
-## How to use
-just simply browse a file, type a decryption key or use our secure key generator, and encrypt or decrypt.
-
-![how-to-use-gif](https://i.imgur.com/skJdUC8.gif)
-
-## Offline Use
-
-the app is cross-platform and is available to download on [**macOS**](https://github.com/sh-dv/hat.sh/releases/download/release-builds/hat.sh-mac.zip) , [**Windows**](https://github.com/sh-dv/hat.sh/releases/download/release-builds/hat.sh-win.zip) and [**linux**](https://github.com/sh-dv/hat.sh/releases/download/release-builds/hat.sh-linux.zip)
 
 ## Requirements
 [NodeJS and NPM](https://www.npmjs.com/get-npm)
 
 [Browserify](http://browserify.org/#install) which lets you require('modules') in the browser by bundling up all of your dependencies.
+
+<hr>
 
 ## Installation
 
@@ -54,20 +52,37 @@ Download or clone the repository
 
  
 
-    $ git clone https://github.com/sh-dv/hat.sh.git hat.sh
+    $ git clone https://github.com/deevonstutter/hat.sh.git hat.sh
 
 go to the app directory
 
     cd [app directory]
 
-open terminal and install the node modules that are in the package.json file
+now run 
+    
+    npm run full-build
+which will install all the node dependencies and build the Browserify bundle.
+At this point you can run the electron 
 
-    sudo npm install
-after the packages are installed 
-bundle main app.js and modules together in one file using Browserify
+<br>
 
-    browserify src/js/app.js -o bundle.js
-then start the app by running index.html
+## NEW SCRIPTS
+Though this is mostly for electron support, I do have some scripts that can be run from the root directory as well.
+Also please keep in mind these scripts were built for **WINDOWS ONLY**.
+<hr>
+
+    npm run build
+This will run the Browserify build process and copy the resulting `bundle.js` to the Electron directory.
+<hr>
+
+    npm run full-build
+This is really just for initializing your build environment.
+<hr>
+
+    npm run e-serve
+This will run the Electron instance.
+
+<hr>
 
 ## Browser Compatibility
 We officially support the last two versions of every major browser. Specifically, we test on the following 

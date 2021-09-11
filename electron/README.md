@@ -30,18 +30,13 @@ in a small amount of code the app can encrypt any **type** of files at any **siz
  
 To use the app all you have to do is **Browse** a file,  **Type** a Decryption Key or **Generate** one through our secure key generator. and your encrypted file is ready to download.
 
-## Downloads
-
- [**macOS**](https://github.com/sh-dv/hat.sh/releases/download/release-builds/hat.sh-mac.zip) , [**Windows**](https://github.com/sh-dv/hat.sh/releases/download/release-builds/hat.sh-win.zip) and [**linux**](https://github.com/sh-dv/hat.sh/releases/download/release-builds/hat.sh-linux.zip)
-
-
 ## Installation using electron
 
 Download or clone the repository
 
  
 
-    $ git clone https://github.com/sh-dv/hat.sh.git hat.sh
+    $ git clone https://github.com/deevonstutter/hat.sh.git hat.sh
 
 go to the app electron directory
 
@@ -49,7 +44,7 @@ go to the app electron directory
 
 open terminal and install the node modules that are in the package.json file
 
-    sudo npm install
+    sudo npm i
 after the packages are installed just run the app
 
     npm start
@@ -57,13 +52,29 @@ to package the app for multiple os systems (mac,win,linux) :
 
     npm run package-[os name] 
 
+## *NOTE:*
+This is an edited version of the regular hat.sh. I've added some npm scripts that make it a bit easier to directly deal with electron. These are as follows:
+ <hr>   
 
+    npm run serve
+This will build the electron package **FOR WINDOWS** and then run it.
+<hr>
 
-## How to use
-just simply browse a file, type a decryption key or use our secure key generator, and encrypt or decrypt.
+    npm run build
+I made this one mostly for convenience, it will build the `app.js` script via Browserify and copy the resulting `bundle.js` to the proper directory to be read by Electron.
 
-![enter image description here](https://i.imgur.com/btZRe3c.gif)
-
+## Some Other Useful Info
+Because this is built with Browserify, some Node and Electron dependencies cannot be directly used as normal.
+For example, direct filesystem access must be done using
+```js
+const fs = window.require('fs');
+```
+rather than 
+```js
+const fs = require('fs');
+```
+because Browserify will strip the Node code and replace it with something for, well, browsers. 
+This will unfortunately break IntelliSense in VS Code, so if you to use it, please make sure you add the `window.` to the require statement before you commit.
 
 
 
