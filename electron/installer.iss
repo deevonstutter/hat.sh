@@ -65,13 +65,9 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\add.bat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\add.reg"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\chrome_100_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\chrome_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\d3dcompiler_47.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\del.bat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\del.reg"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\ffmpeg.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\hat.sh.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Documents\GitHub\hat.sh\electron\release-builds\hat.sh-win32-ia32\icudtl.dat"; DestDir: "{app}"; Flags: ignoreversion
@@ -150,7 +146,7 @@ Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}"; ValueType: string; Value
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 Root: HKA; Subkey: "Software\Classes\Applications\{#MyAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".myp"; ValueData: ""
-Root: HKCR; Subkey: "*\shell\Hatsh\command"; ValueType: string; ValueName: ""; ValueData: ""{app}\hat.sh.exe" "--e=%1""
+Root: HKCR; Subkey: "*\shell\Hatsh\command"; ValueType: string; ValueName: ""; ValueData: "{app}\hat.sh.exe ""--e=%1"""
 Root: HKCR; Subkey: "*\shell\Hatsh"; ValueType: string; ValueName: ""; ValueData: "En/decrypt with hat.sh"
 
 [Icons]
