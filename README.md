@@ -1,7 +1,10 @@
 # PLEASE READ THIS SECTION
 ## This is a heavily modified version of hat.sh designed to make it integrate better with desktop environments. If you want to just use the webapp, please use the regular repository, because this will likely not run the way you would like it to on your web browser.
 
+### I'll try to update this with any updates sh-dev puts out on the 1.5 branch, and intend to port v2 to Electron once it is officially out of beta.
+
 <br>
+<hr>
 
 <p align="center">
   <a href="#" rel="noopener">
