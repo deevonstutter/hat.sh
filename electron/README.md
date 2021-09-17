@@ -74,7 +74,7 @@ rather than
 const fs = require('fs');
 ```
 because Browserify will strip the Node code and replace it with something for, well, browsers. 
-This will unfortunately break IntelliSense in VS Code, so if you to use it, please make sure you add the `window.` to the require statement before you commit.
+This will unfortunately break IntelliSense in VS Code, so if you choose to use require statements, please make sure you add the `window.` to the require statement before you commit.
 
 
 
