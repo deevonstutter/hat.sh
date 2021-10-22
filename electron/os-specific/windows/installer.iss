@@ -6,7 +6,7 @@
 #define MyAppPublisher "shdv"
 #define MyAppURL "https://hat.sh/"
 #define MyAppExeName "hat.sh.exe"
-#define MyAppAssocName MyAppName + " Encypted Binary"
+#define MyAppAssocName MyAppName + " Encrypted Binary"
 #define MyAppAssocExt ".heb"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
 
